@@ -9,7 +9,7 @@ Eval {
 
 Server {
   Port = 8000
-  SourceRoot = /var/www/html/
+  SourceRoot = /var/www/html/rubedo/public
   Type = fastcgi
   DefaultDocument = index.php
 }
