@@ -28,15 +28,12 @@ ADD nginx.conf /etc/nginx/conf.d/default.conf
 # ADD supervisord config with hhvm setup
 ADD supervisord.conf /etc/supervisord.conf
 
-#set to start automatically - supervisord, nginx and mysql
-RUN chkconfig supervisord on
-
 ADD scripts/run.sh /run.sh
 
 RUN chmod a+x /run.sh 
 
 
 EXPOSE 22 80
-#Start supervisord (which will start hhvm), nginx, mysql 
+#Start supervisord (which will start hhvm), nginx
 ENTRYPOINT ["/run.sh"]
 
