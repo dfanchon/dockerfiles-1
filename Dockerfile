@@ -25,7 +25,7 @@ ADD nginx.conf /etc/nginx/conf.d/default.conf
 
 # Start Nginx
 
-# RUN service nginx restart
+RUN service nginx restart
 
 EXPOSE 22 80
 
